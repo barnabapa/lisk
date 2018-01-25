@@ -34,6 +34,7 @@ module.exports = {
 		getBlocksForTransport: link('blocks/getBlocksForTransport.sql'),
 		getHeightByLastId: link('blocks/getHeightByLastId.sql'),
 		getCommonBlock: link('blocks/getCommonBlock.sql')
+
 	},
 	delegates: {
 		countDuplicatedDelegates: link('delegates/countDuplicatedDelegates.sql'),
