@@ -370,11 +370,12 @@ Utils.prototype.aggregateBlocksReward = function (filter, cb) {
 	params.delegates = constants.activeDelegates;
 
 	if (filter.start !== undefined) {
-		params.start = filter.start - constants.epochTime.getTime () / 1000;
+		params.start = (filter.start - constants.epochTime.getTime()) / 1000;
 	}
 
 	if (filter.end !== undefined) {
-		params.end = filter.end - constants.epochTime.getTime () / 1000;
+		params.end = (filter.end - constants.epochTime.getTime()) / 1000;
+		params.end = params.end.toFixed();
 	}
 
 	// Get calculated rewards
